@@ -6,9 +6,9 @@ import { removeTodo, markTodoAsComplete } from '../actions';
 import { loadTodos } from '../thunks';
 
 
-const TodoList = ({ todos = [], onRemovePressed, onCompletePressed, isLoading, startLoadTodos }) => {
+const TodoList = ({ todos = [], onRemovePressed, onCompletePressed, isLoading, startLoadingTodos }) => {
     useEffect(() => {
-        startLoadTodos();
+        startLoadingTodos();
     }, []);
 
     const loadingMessage = <div>Loading todos...</div>;
@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    startLoadTodos: () => dispatch(loadTodos()),
+    startLoadingTodos: () => dispatch(loadTodos()),
     onRemovePressed: text => dispatch(removeTodo(text)),
     onCompletePressed: text => dispatch(markTodoAsComplete(text))
 })
