@@ -1,19 +1,19 @@
 export const CREAT_TODO = 'CREAT_TODO';
-export const createTodo = text => ({
+export const createTodo = todo => ({
     type: CREAT_TODO,
-    payload: { text }
+    payload: { todo }
 });
 
 export const REMOVE_TODO = 'REMOVE_TODO';
-export const removeTodo = text => ({
+export const removeTodo = todo => ({
     type: REMOVE_TODO,
-    payload: { text }
+    payload: { todo }
 });
 
 export const MARK_TODO_AS_COMPLETE = 'MARK_TODO_AS_COMPLETE';
-export const markTodoAsComplete = text => ({
+export const markTodoAsComplete = todo => ({
     type: MARK_TODO_AS_COMPLETE,
-    payload: { text }
+    payload: { todo }
 });
 
 export const LOAD_TODOS_IN_PROGRESS = 'LOAD_TODOS_IN_PROGRESS';
