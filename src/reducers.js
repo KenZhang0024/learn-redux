@@ -1,5 +1,5 @@
 import { 
-    CREAT_TODO, 
+    CREATE_TODO, 
     REMOVE_TODO, 
     MARK_TODO_AS_COMPLETE, 
     LOAD_TODOS_IN_PROGRESS, 
@@ -13,7 +13,7 @@ export const todos = (state = initialState, action) => {
     const { type, payload } = action;
 
     switch (type) {
-        case CREAT_TODO: {
+        case CREATE_TODO: {
             const { todo } = payload;
             return {
                 ...state,

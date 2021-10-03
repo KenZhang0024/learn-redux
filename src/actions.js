@@ -1,6 +1,6 @@
-export const CREAT_TODO = 'CREAT_TODO';
+export const CREATE_TODO = 'CREATE_TODO';
 export const createTodo = todo => ({
-    type: CREAT_TODO,
+    type: CREATE_TODO,
     payload: { todo }
 });
 
